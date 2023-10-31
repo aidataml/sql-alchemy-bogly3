@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Add User {{ user.first_name }} {{ user.last_name }}{% endblock %}
+
+{% block content %}
+
+<h1>Add a New User</h1>
+<form method="POST">
+
+    <form>
+        <div class="form-row align-items-center">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInput">First Name</label>
+            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter First Name" 
+            id="first_name"
+            name="first_name">
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInput">Last Name</label>
+            <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Enter Last Name" 
+            id="last_name"
+            name="last_name">
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Image URL</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Link</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Paste Image URL Here"
+              id="image_url"
+              name="image_url">
+            </div>
+          </div>
+          </div>
+          <div class="col-auto">
+            <a href="/users" class="btn btn-outline-info">Cancel</a>
+            <button type="submit" class="btn btn-primary mb-2">Add User</button>
+          </div>
+        </div>
+      </form>
+
+{% endblock %}
